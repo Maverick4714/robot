@@ -13,7 +13,7 @@ basic.forever(function () {
 })
 basic.forever(function () {
     distance = Tinybit.Ultrasonic_Car()
-    if (distance < 15) {
+    if (distance < 10) {
         Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Back, 97)
         basic.pause(200)
         Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_SpinRight, 101)
@@ -23,11 +23,5 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (Tinybit.Voice_Sensor() > 30) {
-        basic.showIcon(IconNames.Square)
-        basic.showIcon(IconNames.SmallSquare)
-        basic.showIcon(IconNames.SmallDiamond)
-        basic.showIcon(IconNames.Target)
-        basic.showIcon(IconNames.Chessboard)
-    }
+	
 })
