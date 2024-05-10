@@ -28,3 +28,12 @@ basic.forever(function () {
 basic.forever(function () {
 	
 })
+loops.everyInterval(100, function () {
+    if (Tinybit.Voice_Sensor() > 100) {
+        basic.showIcon(IconNames.Square)
+        basic.showIcon(IconNames.SmallSquare)
+        basic.showIcon(IconNames.SmallDiamond)
+        basic.showIcon(IconNames.Target)
+        basic.showIcon(IconNames.Chessboard)
+    }
+})
