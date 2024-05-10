@@ -8,16 +8,6 @@ let distance = 0
 Tinybit.RGB_Car_Big(Tinybit.enColor.OFF)
 Tinybit.RGB_Car_Program().clear()
 Tinybit.RGB_Car_Program().show()
-music.play(music.createSoundExpression(
-WaveShape.Triangle,
-691,
-957,
-164,
-0,
-1043,
-SoundExpressionEffect.Warble,
-InterpolationCurve.Linear
-), music.PlaybackMode.UntilDone)
 basic.forever(function () {
     Tinybit.RGB_Car_Program().showRainbow(1, 50)
 })
@@ -33,8 +23,11 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-	
-})
-basic.forever(function () {
-	
+    if (Tinybit.Voice_Sensor() > 30) {
+        basic.showIcon(IconNames.Square)
+        basic.showIcon(IconNames.SmallSquare)
+        basic.showIcon(IconNames.SmallDiamond)
+        basic.showIcon(IconNames.Target)
+        basic.showIcon(IconNames.Chessboard)
+    }
 })
