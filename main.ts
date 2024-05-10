@@ -16,7 +16,7 @@ basic.forever(function () {
     if (distance < 5) {
         Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Back, 97)
         basic.pause(200)
-        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_SpinRight, 255)
+        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_SpinRight, 173)
         basic.pause(200)
     } else {
         Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Run, 255)
